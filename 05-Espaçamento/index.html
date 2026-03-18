@@ -10,26 +10,163 @@
     <!-- Link CDN do Bootstrap Icons (ESSE É O IMPORTANTE PARA ÍCONES) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     
-    <title>Configuração do Bootstrap 5</title>
+    <title>Espaçamento</title>
 </head>
-<body>
-<h1>Exemplos de Padding (Espaçamento Interno)</h1>
-<p>O Bootstrap oferece uma variedade de classes de espaçamento para controlar o padding (espaçamento interno) dos elementos. Essas classes seguem a convenção <code>.p{direção}-{tamanho}</code>,onde <code>direção</code> pode ser:
-<ul>
-    <li><code>t</code> (Topo), <code>b</code> (base), <code>s</code> (inicio), <code>e</code> (fim), <code>x</code> (horizontal) e <code>y</code> (vertical).</li>
-    <li><code>{tamanho}</code> varia de 0 a 5,onde 0 é sem padding e 5 é o maior padding.</li>
-</ul>
-</p>
-<div class="p-0 bg-primary text-white">
+
+  <h1>Exemplos de Padding (Espaço Interno)</h1>
+  <p>
+    O Bootstrap oferece uma variedade de classes de espaçamento para controlar o padding (espaço interno) dos elementos.
+    Essas classes seguem a convenção <code>.p{direção}-{tamanho}</code>, onde <code>direção</code> pode ser:
+    <ul>
+      <li><code>t</code> (topo), <code>b</code> (base), <code>s</code> (início), <code>e</code> (fim), <code>x</code> (horizontal) e <code>y</code> (vertical).</li>
+      <li><code>{tamanho}</code> varia de 0 a 5, onde 0 é sem padding e 5 é o maior padding.</li>
+    </ul>
+  </p>
+  <div class="p-0 bg-primary text-white">
+    <strong>.p-0</strong>
+    <p>Sem padding, o conteúdo fica colado nas bordas do elemento.</p>
+</div>
+<div class="p-1 bg-secondary text-white">
     <strong>.p-1</strong>
-    <p>Padding pequeno,ideal para elementos compactos ou para criar um leve espaçamento.</p>
-</div>
-<div class="p-2 bg-sucess text-white">
+    <p>Padding pequeno, ideal para elementos compactos ou para criar um leve espaçamento.</p>
+  </div>
+  <div class="p-2 bg-success text-white">
     <strong>.p-2</strong>
-    <p>Padding médio, ótimo para a maioria dos casos, proporcionando um bom equilíbrio entre conteúdo e espaçamento.</p>
+    <p>Padding médio, ótimo para a maioria dos casos, proporcionando um bom equilíbrio entre conteúdo e espaço.</p>
+  </div>
+  <div class="p-3 bg-danger text-white">
+    <strong>.p-3</strong>
+    <p>Padding grande, ideal para destacar seções importantes ou para criar um layout mais arejado.</p>
+  </div>
+  <div class="p-4 bg-warning text-dark">
+    <strong>.p-4</strong>
+    <p>Padding extra grande, perfeito para criar áreas de destaque ou para separar visualmente seções importantes.</p>
+  </div>
+  <div class="p-5 bg-info text-white">
+    <strong>.p-5</strong>
+    <p>Padding máximo, ideal para criar seções muito destacadas ou para dar um ar mais "clean" e espaçado ao layout.</p>
+  </div>
+  <hr>
+  <h1>Exemplos de Margin (Espaço Externo)</h1>
+  <p>
+    As classes de margin seguem a mesma convenção das classes de padding, mas controlam o espaço externo dos elementos.
+    Elas são usadas para criar espaçamento entre elementos, evitando que fiquem colados uns aos outros. 
+  </p>
+  <div class="m-0 bg-primary text-white">
+    <strong>.m-0</strong>
+    <p>Sem margin, os elementos ficam colados uns aos outros, o que pode criar um layout confuso.</p>
+  </div>
+  <div class="m-1 bg-secondary text-white">
+    <strong>.m-1</strong>
+    <p>Margin pequeno, ideal para criar um leve espaçamento entre elementos próximos.</p>
+  </div>
+  <div class="m-2 bg-success text-white">
+    <strong>.m-2</strong>
+    <p>Margin médio, ótimo para a maioria dos casos, proporcionando um bom equilíbrio entre elementos.</p>
+  </div>
+  <div class="m-3 bg-danger text-white">
+    <strong>.m-3</strong>
+    <p>Margin grande, ideal para destacar seções importantes ou para criar um layout mais arejado.</p>
+  </div>
+  <div class="m-4 bg-warning text-dark">
+    <strong>.m-4</strong>
+    <p>Margin extra grande, perfeito para criar áreas de destaque ou para separar visualmente seções importantes.</p>
+  </div>
+  <div class="m-5 bg-info text-white">
+    <strong>.m-5</strong>
+    <p>Margin máximo, ideal para criar seções muito destacadas ou para dar um ar mais "clean" e espaçado ao layout.</p>
+  </div>
+  <hr>
+  <h1>Exemplos de Padding e Margin Combinados</h1>
+  <p>
+    Você também pode combinar as classes de padding e margin para criar layouts mais complexos e personalizados. 
+    Por exemplo, usando <code>.p-3</code> para o padding interno e <code>.m-2</code> para o margin externo, você pode criar um elemento que tenha um bom espaçamento interno e externo ao mesmo tempo.
+  </p>
+  <div class="p-3 m-2 bg-primary text-white">
+    <strong>.p-3 + .m-2</strong>
+    <p>Este elemento tem um padding grande e um margin médio, criando um layout mais arejado e organizado.</p>
+  </div>
+  <div class="p-4 m-3 bg-secondary text-white">
+    <strong>.p-4 + .m-3</strong>
+    <p>Este elemento tem um padding extra grande e um margin grande, ideal para destacar seções importantes ou criar áreas de destaque.</p>
+  </div>
+  <div class="p-5 m-4 bg-success text-white">
+    <strong>.p-5 + .m-4</strong>
+    <p>Este elemento tem o padding máximo e um margin extra grande, perfeito para criar seções muito destacadas ou para dar um ar mais "clean" e espaçado ao layout.</p>
+  </div>
+  <div class="p-2 m-1 bg-danger text-white">
+    <strong>.p-2 + .m-1</strong>
+    <p>Este elemento tem um padding médio e um margin pequeno, ideal para criar um layout equilibrado e organizado.</p>
+  </div>
+  <div class="p-1 m-0 bg-warning text-dark">
+    <strong>.p-1 + .m-0</strong>
+    <p>Este elemento tem um padding pequeno e sem margin, criando um layout mais compacto e próximo.</p>
+  </div>
+  <div class="p-0 m-5 bg-info text-white">
+    <strong>.p-0 + .m-5</strong>
+    <p>Este elemento tem sem padding e o margin máximo, ideal para criar um layout muito espaçado e arejado, onde os elementos ficam bem separados uns dos outros.</p>
+  </div>
+  <hr>
+  <h1>Exemplos de Padding e Margin Específicos</h1>
+  <p>
+    Além das classes genéricas de padding e margin, o Bootstrap também oferece classes específicas para cada direção, como <code>.pt-3</code> para padding-top ou <code>.mb-2</code> para margin-bottom. 
+    Isso permite um controle ainda mais preciso sobre o espaçamento dos elementos.
+  </p>
+  <div class="pt-3 bg-primary text-white">
+    <strong>.pt-3</strong>
+    <p>Padding-top grande, ideal para criar um espaçamento maior na parte superior do elemento.</p>
+  </div>
+  <div class="mb-2 bg-secondary text-white">
+    <strong>.mb-2</strong>
+    <p>Margin-bottom médio, ótimo para criar um espaçamento equilibrado na parte inferior do elemento.</p>
+  </div>
+  <div class="ps-4 bg-success text-white">
+    <strong>.ps-4</strong>
+    <p>Padding-start extra grande, perfeito para criar um espaçamento maior na parte esquerda do elemento (ou direita em layouts RTL).</p>
+  </div>
+  <div class="me-1 bg-danger text-white">
+    <strong>.me-1</strong>
+    <p>Margin-end pequeno, ideal para criar um leve espaçamento na parte direita do elemento (ou esquerda em layouts RTL).</p>
+  </div>
+  <div class="px-5 bg-warning text-dark">
+    <strong>.px-5</strong>
+    <p>Padding-horizontal máximo, ideal para criar um espaçamento muito grande nas partes esquerda e direita do elemento.</p>
+  </div>
+  <div class="my-4 bg-info text-white">
+    <strong>.my-4</strong>
+    <p>Margin-vertical extra grande, perfeito para criar um espaçamento maior nas partes superior e inferior do elemento.</p>
+  </div>
+  <div class="py-2 bg-dark text-white">
+    <strong>.py-2</strong>
+    <p>Padding-vertical médio, ótimo para criar um espaçamento equilibrado nas partes superior e inferior do elemento.</p>
+  </div>
+  <div class="pt-5 mb-3 bg-primary text-white">
+    <strong>.pt-5 + .mb-3</strong>
+    <p>Este elemento tem um padding-top máximo e um margin-bottom grande, ideal para criar um espaçamento muito grande na parte superior e um espaçamento grande na parte inferior do elemento.</p>
+  </div>
+  <div class="ps-1 me-4 bg-secondary text-white">
+    <strong>.ps-1 + .me-4</strong>
+    <p>Este elemento tem um padding-start pequeno e um margin-end extra grande, perfeito para criar um espaçamento leve na parte esquerda e um espaçamento muito grande na parte direita do elemento.</p>
+  </div>
+  <div class="px-3 my-1 bg-success text-white">
+    <strong>.px-3 + .my-1</strong>
+    <p>Este elemento tem um padding-horizontal grande e um margin-vertical pequeno, ideal para criar um espaçamento grande nas partes esquerda e direita do elemento, e um espaçamento leve nas partes superior e inferior.</p>
+  </div>
+  <div class="py-4 mx-2 bg-danger text-white">
+    <strong>.py-4 + .mx-2</strong>
+    <p>Este elemento tem um padding-vertical extra grande e um margin-horizontal médio, perfeito para criar um espaçamento muito grande nas partes superior e inferior do elemento, e um espaçamento equilibrado nas partes esquerda e direita.</p>
+  </div>
+  <div class="pt-1 mb-5 bg-warning text-dark">
+    <strong>.pt-1 + .mb-5</strong>
+    <p>Este elemento tem um padding-top pequeno e um margin-bottom máximo, ideal para criar um espaçamento leve na parte superior e um espaçamento muito grande na parte inferior do elemento.</p>
 </div>
-<div class="p-3 bg-danger text-white">
-    
+<div class="ps-2 me-3 bg-info text-white">
+    <strong>.ps-2 + .me-3</strong>
+    <p>Este elemento tem um padding-start médio e um margin-end grande, ideal para criar um espaçamento equilibrado na parte esquerda e um espaçamento grande na parte direita do elemento.</p>
+</div>
+<div class="px-4 my-5 bg-dark text-white">
+    <strong>.px-4 + .my-5</strong>
+    <p>Este elemento tem um padding-horizontal extra grande e um margin-vertical máximo, perfeito para criar um espaçamento muito grande nas partes esquerda e direita do elemento, e um espaçamento máximo nas partes superior e inferior.</p>
 </div>
 
     <!-- Link CDN do Bootstrap JS (versão única) -->
