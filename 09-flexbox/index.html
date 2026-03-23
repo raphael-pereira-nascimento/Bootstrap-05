@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox com Bootstrap 5</title>
+
+<link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css " rel="stylesheet"
+integridade="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" origem cruzada="anônimo">
+
+<link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css ">
+</head>
+
+<body>
+<div class="container">
+<h1 class="text-center">Flexbox com Bootstrap 5</h1>
+<p class="lead">O Flexbox é um modelo de layout poderoso que permite criar layouts flexíveis e responsivos. O Bootstrap 5 inclui uma série de classes utilitárias para trabalhar com Flexbox, facilitando a criação de layouts complexos sem a necessidade de escrever CSS personalizado.</p>
+
+<h2>1. Container Flexível</h2>
+<p>Para criar um container flexível, basta adicionar a classe <code>.d-flex</code> ao elemento pai. Isso transforma o elemento em um contêiner flexível, permitindo que seus filhos sejam organizados usando as propriedades do Flexbox.</p>
+
+<div class="d-flex bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h2>2. Direção do Flex</h2>
+<p>A direção dos itens flexíveis pode ser controlada usando as classes de direção do Flexbox. As opções incluem: <code>.flex-row</code>, <code>.flex-row-reverse</code>, <code>.flex-column</code> e <code>.flex-column-reverse</code>.</p>
+
+<h3>Coluna Flexível</h3>
+<p>O conteúdo é organizado em uma coluna vertical.</p>
+<div class="d-flex flex-column bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Coluna Flexível Invertida</h3>
+<p>O conteúdo é organizado em uma coluna vertical, mas na ordem inversa.</p>
+<div class="d-flex flex-column-reverse bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Linha Flexível</h3>
+<p>O conteúdo é organizado em uma linha horizontal.</p>
+<div class="d-flex flex-row bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Flex Row Reverse</h3>
+<p>O conteúdo é organizado em uma linha horizontal, mas na ordem inversa.</p>
+<div class="d-flex flex-row-reverse bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+
+<h2>3. Alinhamento dos Itens</h2>
+<p>O alinhamento dos itens flexíveis pode ser controlado usando as classes de alinhamento do Flexbox. As opções incluem: <code>.justify-content-start</code>, <code>.justify-content-end</code>, <code>.justify-content-center</code>, <code>.justify-content-between</code> e <code>.justify-content-around</code>.</p>
+
+<h3>Justificar conteúdo - Centralizar</h3>
+<p>O conteúdo é alinhado ao centro do contêiner flexível.<code>justify-content-center</code></p>
+<div class="d-flex justify-content-center bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Justificar Conteúdo - Início</h3>
+<p>O conteúdo é alinhado ao início do contêiner flexível.<code>justify-content-start</code></p>
+<div class="d-flex justify-content-start bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Justificar Conteúdo - Fim</h3>
+<p>O conteúdo é alinhado ao final do contêiner flexível.<code>justify-content-end</code></p>
+<div class="d-flex justify-content-end bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Justificar conteúdo - Entre</h3>
+<p>O conteúdo é distribuído uniformemente entre os itens, com o primeiro item alinhado ao início e o último item alinhado ao final do contêiner flexível.<code>justify-content-between</code></p>
+<div class="d-flex justify-content-between bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Justificar Conteúdo - Ao Redor</h3>
+<p>O conteúdo é distribuído uniformemente entre os itens, com espaço igual ao redor de cada item.<code>justify-content-around</code></p>
+<div class="d-flex justify-content-around bg-light p-3 mb-4">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+
+<h2>4. Alinhamento dos Itens no Eixo Cruzado</h2>
+<p>O alinhamento dos itens no eixo cruzado pode ser controlado usando as classes de alinhamento do Flexbox. As opções incluem: <code>.align-items-start</code>, <code>.align-items-end</code>, <code>.align-items-center</code>, <code>.align-items-baseline</code> e <code>.align-items-stretch</code>.</p>
+
+<h3>Alinhar Itens - Centro</h3>
+<p>Os itens são alinhados ao centro do eixo cruzado.<code>.align-items-center</code></p>
+<div class="d-flex align-items-center bg-info p-3 mb-4" style="height: 120px;">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Alinhar Itens - Início</h3>
+<p>Os itens são alinhados ao início do eixo cruzado.<code>.align-items-start</code></p>
+<div class="d-flex align-items-start bg-info p-3 mb-4" style="height: 120px;">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Alinhar Itens - Final</h3>
+<p>Os itens são alinhados ao final do eixo cruzado.<code>.align-items-end</code></p>
+<div class="d-flex align-items-end bg-info p-3 mb-4" style="height: 120px;">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Alinhar Itens - Linha de Base</h3>
+<p>Os itens são alinhados à linha de base do contêiner flexível.<code>.align-items-baseline</code></p>
+<div class="d-flex align-items-baseline bg-info p-3 mb-4" style="height: 120px;">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+
+<h3>Alinhar Itens - Esticar</h3>
+<p>Os itens são esticados para preencher o contêiner flexível.<code>.align-items-stretch</code></p>
+<div class="d-flex align-items-stretch bg-info p-3 mb-4" style="height: 120px;">
+    <div class="p-2 bg-primary text-white">Item 1</div>
+    <div class="p-2 bg-secondary text-white">Item 2</div>
+    <div class="p-2 bg-success text-white">Item 3</div>
+</div>
+</div>
+
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js "
+integridade="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+origem cruzada="anônimo"></script>
+</body>
+
+</html>

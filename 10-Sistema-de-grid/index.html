@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Grid com Bootstrap 5</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+<div class="container">
+<h1 class="text-center">Sistema de Grid com Bootstrap 5</h1>
+<p class="lead">O sistema de grid do Bootstrap 5 é uma poderosa ferramenta para criar layouts responsivos e flexíveis. Ele é baseado em um sistema de 12 colunas que se adapta a diferentes tamanhos de tela, permitindo que você crie designs complexos com facilidade.</p>
+<h2>1. Estrutura Básica do Grid</h2>
+<p>O sistema de grid do Bootstrap é composto por três elementos principais: <code>.container</code>, <code>.row</code> e <code>.col</code>. O container é o elemento pai que envolve as linhas e colunas, a row é usada para criar uma linha horizontal e as colunas são usadas para dividir a linha em partes iguais ou personalizadas.</p>
+<div class="container bg-light p-3 mb-4">
+    <p>Este é um exemplo de estrutura básica do grid. O container envolve a row, que por sua vez contém as colunas.</p>
+</div>
+<h2>Exemplos de Grid</h2>
+<p>Os exemplos abaixo demonstram diferentes formas de usar o sistema de grid do Bootstrap:</p>
+<p>
+    <strong>Exemplo 1:</strong> Duas colunas, uma ocupando 8/12 da largura e a outra ocupando 4/12 da largura.
+</p>
+<div class="container mb-3">
+    <div class="row bg-info p-3">
+    <div class="col-8 bg-primary text-white">Coluna maior (8/12)</div>
+    <div class="col-4 bg-secondary text-white">Coluna menor (4/12)</div>
+    </div>
+</div>
+
+<p>
+    <strong>Exemplo 2:</strong> Duas colunas, cada uma ocupando metade da largura (6/12).
+</p>
+
+<div class="container mb-3">
+    <div class="row bg-info p-3">
+    <div class="col-md-6 bg-success text-white">Coluna 1 (6/12)</div>
+    <div class="col-md-6 bg-danger text-white">Coluna 2 (6/12)</div>
+    </div>
+</div>
+
+<p>
+    <strong>Exemplo 3:</strong> Três colunas, cada uma ocupando um terço da largura (4/12).
+</p>
+
+<div class="container mb-3">
+    <div class="row bg-info p-3">
+    <div class="col-lg-4 bg-warning text-dark">Coluna 1 (4/12)</div>
+    <div class="col-lg-4 bg-success text-dark">Coluna 2 (4/12)</div>
+    <div class="col-lg-4 bg-danger text-dark">Coluna 3 (4/12)</div>
+    </div>
+</div>
+
+<h2>2. Colunas Responsivas</h2>
+<p>As colunas no sistema de grid do Bootstrap podem ser configuradas para serem responsivas, o que significa que elas se ajustam automaticamente com base no tamanho da tela. Você pode usar classes como <code>.col-sm</code>, <code>.col-md</code>, <code>.col-lg</code>, etc., para definir o comportamento das colunas em diferentes breakpoints.</p>
+<p>
+    <strong>Breakpoints:</strong> <br>
+    <strong>col-xs:</strong> Aplica-se a telas extra pequenas (≥576px). <br>
+    <strong>col-sm:</strong> Aplica-se a telas pequenas (≥576px). <br>
+    <strong>col-md:</strong> Aplica-se a telas médias (≥768px). <br>
+    <strong>col-lg:</strong> Aplica-se a telas grandes (≥992px). <br>
+    <strong>col-xl:</strong> Aplica-se a telas extra grandes (≥1200px). <br>
+</p>
+<div class="row bg-light p-3 mb-4">
+    <div class="col-sm-6 col-md-4 col-lg-3">
+    <p>Coluna 1: Esta coluna ocupa metade da largura em telas pequenas, um terço em telas médias e um quarto em telas grandes.</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+    <p>Coluna 2: Esta coluna ocupa metade da largura em telas pequenas, um terço em telas médias e um quarto em telas grandes.</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+    <p>Coluna 3: Esta coluna ocupa metade da largura em telas pequenas, um terço em telas médias e um quarto em telas grandes.</p>
+    </div>
+    <div class="col-sm-6 col-md-4 col-lg-3">
+    <p>Coluna 4: Esta coluna ocupa metade da largura em telas pequenas, um terço em telas médias e um quarto em telas grandes.</p>
+    </div>
+</div>
+<h2>3. Colunas Personalizadas</h2>
+<p>Além das colunas responsivas, o Bootstrap também permite criar colunas personalizadas usando classes como <code>.col-</code> seguido do número de colunas que você deseja ocupar. Por exemplo, <code>.col-6</code> fará com que a coluna ocupe metade da largura da linha.</p>
+<div class="row bg-light p-3 mb-4">
+    <div class="col-6">
+    <p>Coluna 1: Esta coluna ocupa metade da largura da linha.</p>
+    </div>
+    <div class="col-6">
+    <p>Coluna 2: Esta coluna ocupa a outra metade da largura da linha.</p>
+    </div>
+</div>
+</div>
+
+<div class="container">
+<h2>4. Alinhamento e Ordenação</h2>
+<p>O sistema de grid do Bootstrap também oferece classes para alinhar e ordenar as colunas. Você pode usar classes como <code>.align-items-start</code>, <code>.align-items-center</code>, <code>.align-items-end</code> para controlar o alinhamento vertical das colunas, e classes como <code>.order-1</code>, <code>.order-2</code>, etc., para controlar a ordem das colunas em diferentes breakpoints.</p>
+<div class="row bg-light p-3 mb-4 align-items-center">
+    <div class="col-4 order-2">
+    <p>Coluna 1: Esta coluna é a segunda na ordem, mas está alinhada ao centro verticalmente.</p>
+    </div>
+    <div class="col-4 order-1">
+    <p>Coluna 2: Esta coluna é a primeira na ordem, mas está alinhada ao centro verticalmente.</p>
+    </div>
+    <div class="col-4 order-3">
+    <p>Coluna 3: Esta coluna é a terceira na ordem, mas está alinhada ao centro verticalmente.</p>
+    </div>
+</div>
+</div>
+
+<div class="container">
+<h2>5. Gutter (Espaçamento entre Colunas)</h2>
+<p>O sistema de grid do Bootstrap inclui um gutter, que é o espaço entre as colunas. Por padrão, o gutter tem uma largura de 30px (15px em cada lado da coluna). Você pode ajustar o gutter usando classes como <code>.g-0</code>, <code>.g-1</code>, <code>.g-2</code>, etc., para controlar o espaçamento entre as colunas.</p>
+<div class="row g-0 bg-light p-3 mb-4">
+    <div class="col-6 bg-secondary text-white">
+    <p>Coluna 1: Esta coluna ocupa metade da largura da linha, sem espaçamento entre as colunas.</p>
+    </div>
+    <div class="col-6 bg-secondary text-white">
+    <p>Coluna 2: Esta coluna ocupa a outra metade da largura da linha, sem espaçamento entre as colunas.</p>
+    </div>
+</div>
+</div>
+
+<div class="container">
+<h2>6. Grid Aninhado</h2>
+<p>O sistema de grid do Bootstrap também permite criar grids aninhados, ou seja, colunas dentro de outras colunas. Isso é útil para criar layouts mais complexos e organizados.</p>
+<div class="row bg-light p-3 mb-4">
+    <div class="col-6">
+    <p>Coluna 1: Esta coluna ocupa metade da largura da linha.</p>
+    <div class="row">
+        <div class="col-6">
+        <p>Subcoluna 1: Esta subcoluna ocupa metade da largura da coluna pai.</p>
+        </div>
+        <div class="col-6">
+        <p>Subcoluna 2: Esta subcoluna ocupa a outra metade da largura da coluna pai.</p>
+        </div>
+    </div>
+    </div>
+    <div class="col-6">
+    <p>Coluna 2: Esta coluna ocupa a outra metade da largura da linha.</p>
+    </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"></script>
+</body>
+
+</html>
