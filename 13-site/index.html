@@ -415,14 +415,79 @@
                     </div>
                     <!-- Fim dos Cards-->
                 </div>
-
             </div>
         </section>
 
 <!-- Seção Depoimentos-->
-        <section id="depoimentos" class="d-flex">
+    <section 
+    id="depoimentos" 
+    class="min-vh-100 d-flex alig-items-center bg-dark bg-gradient py-5 border-top border-secondary">
+        <div class="container text-center">
+            <div class="mb-5">
+                <h2 class="display-4 fw-bold text-white">O que dizem nossos 
+                    <span class="text-info">Devs</span>
+                </h2>
+                <p class="text-secondary">Feedback de quem já migrou para o setup de alta performance.</p>
+            </div>
+            <!-- Carrossel de depoimentos -->
+            <div id="carrosselDepoimentos" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Depoimento 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <!-- Card de depoimento -->
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                    <img
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&fit=acrop"
+                                    class="img-fluid rounded-circle border border-info border-4"
+                                    style="width: 150px; height: 150px; object-fit: cover;"
+                                    alt="Imagem de uma mulher sorridente usando um vestido vermelho e cabelos soltos ao vento"
+                                    >
+                                    </div>
+                                    <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
 
-        </section>
+                <!-- Depoimento 2 -->
+                <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=300&H=300&fit=acrop" class="d-block w-100" alt="Imagem de um homem de terno preto usando óculos e com expressão séria">
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?q=80&w=300&fit=acrop" class="d-block w-100" alt="Imagem de um homem de camisa azul e óculos de lentes quadrados">
+                </div>
+            </div>
+            <!-- Fim carousel-item -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+    </section>
 
 <!-- Seção Contato-->
         <section id="contato" class="d-flex">
