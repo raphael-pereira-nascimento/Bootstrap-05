@@ -1,482 +1,461 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Dev Shop / Hardware para Full Stack</title>
-    
-    <!-- Link CDN do Bootstrap 5 CSS (versão única) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
-    <!-- Link CDN do Bootstrap Icons (ESSE É O IMPORTANTE PARA ÍCONES) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    
+    <title>Nexus Dev Shop | Hardware para Full Stack</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <style>
         .placeholder-newslatter::placeholder {
-            color: #969393 !important;
-            opacity: 1;
+        color: #6c757d;
         }
     </style>
-</head>
+    </head>
 
-<body id="topo" class="bg-black text-white position-relative">
+    <body id="topo" class="bg-black text-white position-relative">
     <header class="sticky-top shadow-lg" style="z-index: 1060;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
-            <div class="container">
-                <a class="navbar-brand fw-bold text-info fs-3" href="#">
-                    <i class="bi bi-terminal-fill me-2"></i>
-                    NEXUS <span class="text-white"> DEV SHOP</span>
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info fs-3" href="#">
+            <i class="bi bi-terminal-fill me-2"></i>
+            NEXUS <span class="text-white">DEV SHOP</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navMenu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto fw-medium gap-3">
+                <li class="nav-item">
+                <a class="nav-link" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Produtos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Depoimentos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Contato</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                <a class="btn btn-outline-info text-white fw-bold shadow-sm" href="#">
+                    <i class="bi bi-cart3 me-1"></i>Carrinho
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div id="navMenu" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto fw-medium gap-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Produtos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Depoimentos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
-                        </li>
-                        <li class="nav-item ms-lg-2">
-                            <a class="btn btn-outline-info text-white fw-bolt shadow-sm" href="#">
-                                <i class="bi bi-cart3 me-1"></i>Carrinho</a>
-                        </li>
-                    </ul>
-                </div>
+                </li>
+            </ul>
             </div>
+        </div>
         </nav>
     </header>
 
     <main>
-<!-- Seção Hero-->
-        <section id="hero" class=" min-vh-100 d-flex align-items-center bg-black position-relative overflow-hidden">
-            <div id="hero-carrossel" class="carousel slide carroussel-fade w-100 h-100 position-absolute top-0 start-0" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#hero-carrossel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#hero-carrossel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#hero-carrossel" data-bs-slide-to="2"></button>
-                </div>
-                <div class="carousel-inner h-100">
-                    <div class="carousel-item active h-100">
-                        <img
-                            src="https://images.unsplash.com/photo-1593640409606-59cb8823175f?q=80&w=2070" 
-                            class="d-block w-100 h-100 object-fit-cover opacity-50"
-                            alt="Imagem de um notebook gamer com iluminação RGB, representando a tecnologia e o universo dos desenvolvimentos full stack."
-                        >
-                        <div class="carousel-caption d-flex flex-column h-100 justify-content-center align-items-start text-start">
-                            <span class="badge bg-info py-2 px-3 fs-6 mb-3 shadow">Setup Premium</span>
-                            <h1 class="display-1 fw-bold">Dell Alienware 2026</h1>
-                            <p class="lead fs-3 w-75 d-none d-md-block">
-                                Porformance brutal para Docker, WSL 2 e Java 25.
-                            </p>
-                            <a
-                                href="#"
-                                class="btn btn-outline-info btn-lg text-white py-3 px-5 mt-3 shadow-lg text-uppercase"
-                            >
-                                Explorar Produtos
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item h-100">
-                        <img
-                            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2070" 
-                            class="d-block w-100 h-100 object-fit-cover opacity-50"
-                            alt="Imagem de dois Macbooks sobre uma mesa em um quarto escuro"
-                        >
-                        <div class="carousel-caption d-flex flex-column h-100 justify-content-center align-items-start text-start">
-                            <span class="badge bg-info py-2 px-3 fs-6 mb-3 shadow">Code Anywhere</span>
-                            <h1 class="display-1 fw-bold">Ecosystem MacBook</h1>
-                            <p class="lead fs-3 w-75 d-none d-md-block">
-                                A fluidez que o seu front-end em ReactJS com TypeScript exige.
-                            </p>
-                            <a
-                                href="#"
-                                class="btn btn-outline-info btn-lg text-white py-3 px-5 mt-3 shadow-lg text-uppercase"
-                            >
-                                Ver Portáteis
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item h-100">
-                        <img
-                            src="https://images.unsplash.com/photo-1696710257827-75e2e5954059?q=80&w=2070" 
-                            class="d-block w-100 h-100 object-fit-cover opacity-50"
-                            alt="Imagem de um PC gamer com teclado RGB, monitor ligado e CPU com leds RGBsobre uma mesa de computador"
-                        >
-                        <div class="carousel-caption d-flex flex-column h-100 justify-content-center align-items-start text-start">
-                            <span class="badge bg-info py-2 px-3 fs-6 mb-3 shadow">Data Power</span>
-                            <h1 class="display-1 fw-bold">Workstations Master</h1>
-                            <p class="lead fs-3 w-75 d-none d-md-block">
-                                O harware que sustenta seus microsserviços Spring Boot.
-                            </p>
-                            <a
-                                href="#"
-                                class="btn btn-outline-info btn-lg text-white py-3 px-5 mt-3 shadow-lg text-uppercase"
-                            >
-                                Configurar PC
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#hero-carrossel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#hero-carrossel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+        <!-- Seção Hero -->
+        <section id="hero" class="min-vh-100 d-flex align-items-center bg-black position-relative overflow-hidden">
+        <div id="hero-carrossel" class="carousel slide carousel-fade w-100 h-100 position-absolute top-0 start-0" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#hero-carrossel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#hero-carrossel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#hero-carrossel" data-bs-slide-to="2"></button>
             </div>
+            <div class="carousel-inner h-100">
+            <div class="carousel-item active h-100">
+                <img 
+                src="https://images.unsplash.com/photo-1593640409606-59cb8823175f?q=80&w=2070" 
+                class="d-block w-100 h-100 object-fit-cover opacity-50" 
+                alt="Imagem de um notebook gamer com iluminação RGB, representando a tecnologia e o universo dos desenvolvedores full stack."
+                >
+                <div class="carousel-caption d-flex flex-column h-100 justify-content-center align-items-start text-start">
+                <span class="badge bg-info py-2 px-3 fs-6 mb-3 shadow">Setup Premium</span>
+                <h1 class="display-1 fw-bold">Dell Alienware 2026</h1>
+                <p class="lead fs-3 w-75 d-none d-md-block">
+                    Performance bruta para Docker, WSL 2 e Java 25.
+                </p>
+                <a 
+                    href="#" 
+                    class="btn btn-outline-info btn-lg text-white py-3 px-5 mt-3 shadow-lg text-uppercase"
+                >
+                    Explorar Produtos
+                </a>
+                </div>
+            </div>
+            <div class="carousel-item h-100">
+                <img 
+                src="https://images.unsplash.com/photo-1684234737917-5c6f223a8a8f?q=80&w=2070" 
+                class="d-block w-100 h-100 object-fit-cover opacity-50" 
+                alt="Imagem de dois MacBooks sobre uma mesa de escritorio e um fone de ouvido ao lado"
+                >
+                <div class="carousel-caption d-flex flex-column h-100 justify-content-center align-items-start text-start">
+                <span class="badge bg-info py-2 px-3 fs-6 mb-3 shadow">Code Anywhere</span>
+                <h1 class="display-1 fw-bold">Ecosystem MacBook</h1>
+                <p class="lead fs-3 w-75 d-none d-md-block">
+                    A fluidez que o seu front-end em ReactJS com TypeScript exige.
+                </p>
+                <a 
+                    href="#" 
+                    class="btn btn-outline-info btn-lg text-white py-3 px-5 mt-3 shadow-lg text-uppercase"
+                >
+                    Ver Portáteis
+                </a>
+                </div>
+            </div>
+            <div class="carousel-item h-100">
+                <img 
+                src="https://images.unsplash.com/photo-1696710257827-75e2e5954059?q=80&w=2070" 
+                class="d-block w-100 h-100 object-fit-cover opacity-50" 
+                alt="Imagem de um PC gamer com teclado RGB, monitor ligado e CPU com leds RGB sobre uma mesa de computador"
+                >
+                <div class="carousel-caption d-flex flex-column h-100 justify-content-center align-items-start text-start">
+                <span class="badge bg-info py-2 px-3 fs-6 mb-3 shadow">Data Power</span>
+                <h1 class="display-1 fw-bold">Workstations Master</h1>
+                <p class="lead fs-3 w-75 d-none d-md-block">
+                    O hardware que sustenta seus microsserviços Spring Boot.
+                </p>
+                <a 
+                    href="#" 
+                    class="btn btn-outline-info btn-lg text-white py-3 px-5 mt-3 shadow-lg text-uppercase"
+                >
+                    Configurar PC
+                </a>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#hero-carrossel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#hero-carrossel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         </section>
 
-
-        <!-- Seção Sobre-->
+        <!-- Seção Sobre -->
         <section id="sobre" class="min-vh-100 d-flex align-items-center py-5 border-top border-secondary">
-            <div class="container">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-5">
-                        <h6 class="text-info fw-bold text-uppercase ls-wide">Nossa História</h6>
-                        <h2 class="display-4 fw-bold text-white mb-4">Inovação Tecnológica em Mato Grosso</h2>
-                        <p class="lead text-secondary">
-                            A Nexus Dev Shop nasceu em Cuiabá para equipar a nova geração de devs Full Stack com o que há de melhor em infraestrutura.
-                        </p>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="row g-4 text-start">
-                            <div class="col-md-6">
-                                <div class="bg-blackb p-4 border border-secondary rounded-4 h-100 shadow-sm">
-                                    <i class="bi bi-rocket-takeoff text-info fs-1 d-block mb-3"></i>
-                                    <h4 class="text-white">Missão</h4>
-                                    <p class="text-secondary small">
-                                        Prover hardware de alta performance para impulsionar projetos de TI e educação tecnológica.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="bg-blackb p-4 border border-secondary rounded-4 h-100 shadow-sm">
-                                    <i class="bi bi-eye text-info fs-1 d-block mb-3"></i>
-                                    <h4 class="text-white">Visão</h4>
-                                    <p class="text-secondary small">
-                                        Tornar-se o maior hub de tecnologia e referência em hardware especializado do Centro-Oeste.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="bg-blackb p-4 border border-secondary rounded-4 h-100 shadow-sm d-flex align-items-center gap-4 text-start">
-                                    <i class="bi bi-shield-check text-info display-5"></i>
-                                    <div>
-                                        <h4 class="text-white mb-1">Nossos Valores</h4>
-                                        <p class="text-secondary small-mb-0">Transparência, suporte técnico real e compromisso com o sucesso do desenvolvedor.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container">
+            <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <h6 class="text-info fw-bold text-uppercase ls-wide">Nossa História</h6>
+                <h2 class="display-4 fw-bold text-white mb-4">Inovação Tecnológica em Mato Grosso</h2>
+                <p class="lead text-secondary">
+                A Nexus Dev Shop nasceu em Cuiabá para equipar a nova geração de devs Full Stack com o que há de melhor em infraestrutura.
+                </p>
             </div>
-        </section>
-
-<!-- Seção Produtos-->
-        <section id="produtos" 
-        class="min-vh-100 d-flex bg-black align-items-center py-5 border-top border-secondary">
-            <div class="container py-5">
-                <div class="text-center mb-5">
-                    <h2 class="display-4 fw-bold text-white">Vitrine Nexus</h2>
-                    <p class="text-secondary">
-                        Performance testada e aprovada para ambientes de desenvolvimento pesado.
+            <div class="col-lg-7">
+                <div class="row g-4 text-start">
+                <div class="col-md-6">
+                    <div class="bg-black p-4 border border-secondary rounded-4 h-100 shadow-sm">
+                    <i class="bi bi-rocket-takeoff text-info fs-1 d-block mb-3"></i>
+                    <h4 class="text-white">Missão</h4>
+                    <p class="text-secondary small">
+                        Prover hardware de alta performance para impulsionar projetos de TI e educação tecnológica.
                     </p>
+                    </div>
                 </div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                    <!-- Card 1 -->
-                    <div class="col text-start">
-                        <div
-                            class="card h100 border-secondary bg-dark text-white shadow-lg overflow-hidden"
-                        >
-                        <img
-                            src="https://images.unsplash.com/photo-1617194242688-1283f274e46d?q=80&w=800" 
-                            class="card-img-top object-fit-cover" 
-                            style="height: 180px;" 
-                            alt="Imagem de um notebook Dell Gamer"
-                        >
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="fw-bold mb-2">Notebook Dell Gamer</h5>
-                            <p class="text-secondary small flex-grow-1">Intel i7 13* geração, 32GB RAM,1TB SSD,NVIDIA RTX 4050 86B, 15.6 Full HD.
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
-                                <span class="h5 fw-bold text-info mb-0">R$ 12.990,00</span>
-                                <button 
-                                class="btn btn-outline-info btn-sm rounded px-3 shadow-sm "
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalProd">
-                                    Ver Detalhes
-                                </button>
-                            </div>
-                        </div>
-                        </div>
+                <div class="col-md-6">
+                    <div class="bg-black p-4 border border-secondary rounded-4 h-100 shadow-sm">
+                    <i class="bi bi-eye text-info fs-1 d-block mb-3"></i>
+                    <h4 class="text-white">Visão</h4>
+                    <p class="text-secondary small">
+                        Tornar-se o maior hub de tecnologia e referência em hardware especializado do Centro-Oeste.
+                    </p>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="col text-start">
-                        <div
-                            class="card h100 border-secondary bg-dark text-white shadow-lg overflow-hidden"
-                        >
-                        <img
-                            src="https://images.unsplash.com/photo-1649394233584-217c46cb9612?q=80&w=800" 
-                            class="card-img-top object-fit-cover" 
-                            style="height: 180px;" 
-                            alt="Imagem de um MackBook Pro M3"
-                        >
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="fw-bold mb-2">MackBook Pro M3</h5>
-                            <p class="text-secondary small flex-grow-1">Apple M3, 16GB RAM, 512GB SSD, Tela Retina 14" com True Tone, até 18 horas de bateria.
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
-                                <span class="h5 fw-bold text-info mb-0">R$ 17.900,00</span>
-                                <button 
-                                class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalProd">
-                                    Ver Detalhes
-                                </button>
-                            </div>
-                        </div>
-                        </div>
+                </div>
+                <div class="col-12">
+                    <div class="bg-black p-4 border border-secondary rounded-4 h-100 shadow-sm d-flex align-items-center gap-4 text-start">
+                    <i class="bi bi-shield-check text-info display-5"></i>
+                    <div>
+                        <h4 class="text-white mb-1">Nossos Valores</h4>
+                        <p class="text-secondary small mb-0">Transparência, suporte técnico real e compromisso com o sucesso do desenvolvedor.</p>
                     </div>
-                    <!-- Card 3 -->
-                    <div class="col text-start">
-                        <div
-                            class="card h100 border-secondary bg-dark text-white shadow-lg overflow-hidden"
-                        >
-                        <img
-                            src="https://images.unsplash.com/photo-1610576660982-9eab5683cb42?q=80&w=800" 
-                            class="card-img-top object-fit-cover" 
-                            style="height: 180px;" 
-                            alt="Imagem de um Monitor 4k 34"
-                        >
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="fw-bold mb-2">Monitor 4k 34</h5>
-                            <p class="text-secondary small flex-grow-1">Monitor ultrawide 34" 4k UHD, painel IPS, HDR10, portas USB-C e HDMI.
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
-                                <span class="h5 fw-bold text-info mb-0">R$ 3.200,00</span>
-                                <button 
-                                class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalProd">
-                                    Ver Detalhes
-                                </button>
-                            </div>
-                        </div>
-                        </div>
                     </div>
-                    <!-- Card 4 -->
-                    <div class="col text-start">
-                        <div
-                            class="card h100 border-secondary bg-dark text-white shadow-lg overflow-hidden"
-                        >
-                        <img
-                            src="https://images.unsplash.com/photo-1706954867029-3798018ae194?q=80&w=800" 
-                            class="card-img-top object-fit-cover" 
-                            style="height: 180px;" 
-                            alt="Imagem de uma Placa de Vídeo RTX 4070"
-                        >
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="fw-bold mb-2">Placa de Vídeo RTX 4070</h5>
-                            <p class="text-secondary small flex-grow-1">NVIDIA GeForce RTX 4070, 6GB GDDR6, Ray Tracing, DLSS, ideal para desenvolvimento gráfico e machine learning.
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
-                                <span class="h5 fw-bold text-info mb-0">R$ 5.000,00</span>
-                                <button 
-                                class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalProd">
-                                    Ver Detalhes
-                                </button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <!-- Card 5 -->
-                    <div class="col text-start">
-                        <div
-                            class="card h100 border-secondary bg-dark text-white shadow-lg overflow-hidden"
-                        >
-                        <img
-                            src="https://images.unsplash.com/photo-1686705562930-4f3e46f620d8?q=80&w=800" 
-                            class="card-img-top object-fit-cover" 
-                            style="height: 180px;" 
-                            alt="Imagem de um SSD NVMe 1TB"
-                        >
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="fw-bold mb-2">SSD NVMe 1TB</h5>
-                            <p class="text-secondary small flex-grow-1">SSD NVMe de 1TB, leitura e gravação rápidas, ideal para armazenamento de dados e sistemas operacionais.
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
-                                <span class="h5 fw-bold text-info mb-0">R$ 899,99</span>
-                                <button 
-                                class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalProd">
-                                    Ver Detalhes
-                                </button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <!-- Card 6 -->
-                    <div class="col text-start">
-                        <div
-                            class="card h100 border-secondary bg-dark text-white shadow-lg overflow-hidden"
-                        >
-                        <img
-                            src="https://plus.unsplash.com/premium_photo-1664194583917-b0ba07c4ce2a?q=80&w=800" 
-                            class="card-img-top object-fit-cover" 
-                            style="height: 180px;" 
-                            alt="Imagem de um notebook Teclado Mecânico"
-                        >
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="fw-bold mb-2">Teclado Mecânico</h5>
-                            <p class="text-secondary small flex-grow-1">Teclado mecânico com iluminação RGB, switches de alta qualidade, ideal para gaming e produtividade.
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
-                                <span class="h5 fw-bold text-info mb-0">R$ 299,99</span>
-                                <button 
-                                class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalProd">
-                                    Ver Detalhes
-                                </button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <!-- Card 7 -->
-                    <div class="col text-start">
-                        <div
-                            class="card h100 border-secondary bg-dark text-white shadow-lg overflow-hidden"
-                        >
-                        <img
-                            src="https://images.unsplash.com/photo-1628832307345-7404b47f1751?q=80&w=800" 
-                            class="card-img-top object-fit-cover" 
-                            style="height: 180px;" 
-                            alt="Imagem de um notebook Mouse Gamer"
-                        >
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="fw-bold mb-2">Mouse Gamer</h5>
-                            <p class="text-secondary small flex-grow-1">Mouse gamer ergônico, sensor óptico de alta precisão, 16.00 DPI, ideal para jogos.
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
-                                <span class="h5 fw-bold text-info mb-0">R$ 190,00</span>
-                                <button 
-                                class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalProd">
-                                    Ver Detalhes
-                                </button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <!-- Card 8 -->
-                    <div class="col text-start">
-                        <div
-                            class="card h100 border-secondary bg-dark text-white shadow-lg overflow-hidden"
-                        >
-                        <img
-                            src="https://images.unsplash.com/photo-1618339220157-daa2cd9ade56?q=80&w=800" 
-                            class="card-img-top object-fit-cover" 
-                            style="height: 180px;" 
-                            alt="Imagem de um PC Workstation Ryzen 9"
-                        >
-                        <div class="card-body p-4 d-flex flex-column">
-                            <h5 class="fw-bold mb-2">PC Workstation Ryzen 9</h5>
-                            <p class="text-secondary small flex-grow-1">PC Workstation com AMD Ryzen 9 5950X,64GB RAM, 2TB SSD, NVIDIA RTX 3080, ideal para desenvolvimento pesado e renderização.
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
-                                <span class="h5 fw-bold text-info mb-0">R$ 13.990,00</span>
-                                <button 
-                                class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modalProd">
-                                    Ver Detalhes
-                                </button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <!-- Fim dos Cards-->
+                </div>
                 </div>
             </div>
+            </div>
+        </div>
         </section>
 
-<!-- Seção Depoimentos-->
-    <section 
-    id="depoimentos" 
-    class="min-vh-100 d-flex alig-items-center bg-dark bg-gradient py-5 border-top border-secondary">
+        <!-- Seção Produtos -->
+        <section id="produtos" class="min-vh-100 d-flex bg-black align-items-center py-5 border-top border-secondary">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold text-white">Vitrine Nexus</h2>
+            <p class="text-secondary">
+                Performance testada e aprovada para ambientes de desenvolvimento pesado.
+            </p>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+            <!-- Card 1 -->
+            <div class="col text-start">
+                <div 
+                class="card h-100 border-secondary bg-dark text-white shadow-lg overflow-hidden"
+                >
+                <img 
+                    src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=800" 
+                    class="card-img-top objet-fit-cover" 
+                    style="height: 180px;" 
+                    alt="Imagem de um notebook Dell Gamer"
+                >
+                <div class="card-body p-4 d-flex flex-column">
+                    <h5 class="fw-bold mb-2">Notebook Dell Gamer</h5>
+                    <p class="text-secondary small flex-grow-1">Intel i7 13ª geração, 32GB RAM, 1TB SSD, NVIDIA RTX 4050 8GB, 15.6" Full HD.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
+                    <span class="h5 fw-bold text-info mb-0">R$ 12.990,00</span>
+                    <button 
+                        class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white"
+                        data-bs-toggle="modal" 
+                        data-bs-target="#modalProd"
+                    >
+                        Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col text-start">
+                <div class="card h-100 border-secondary bg-dark text-white shadow-lg overflow-hidden">
+                <img 
+                    src="https://images.unsplash.com/photo-1649394233584-217c46cb9612?q=80&w=800"
+                    class="card-img-top objet-fit-cover" 
+                    style="height: 180px;" 
+                    alt="Imagem de um MacBook Pro M3"
+                >
+                <div class="card-body p-4 d-flex flex-column">
+                    <h5 class="fw-bold mb-2">MackBook Pro M3</h5>
+                    <p class="text-secondary small flex-grow-1">Apple M3, 16GB RAM, 512GB SSD, Tela Retina 14" com True Tone, até 18 horas de bateria.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
+                    <span class="h5 fw-bold text-info mb-0">R$ 17.990,00</span>
+                    <button class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white" data-bs-toggle="modal"
+                        data-bs-target="#modalProd">
+                        Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col text-start">
+                <div class="card h-100 border-secondary bg-dark text-white shadow-lg overflow-hidden">
+                <img 
+                    src="https://images.unsplash.com/photo-1701318134621-55adccb96ccb?q=80&w=800"
+                    class="card-img-top objet-fit-cover" 
+                    style="height: 180px;" 
+                    alt="Imagem de um monitor 4k 34"
+                >
+                <div class="card-body p-4 d-flex flex-column">
+                    <h5 class="fw-bold mb-2">Monitor 4k 34</h5>
+                    <p class="text-secondary small flex-grow-1">
+                    Monitor ultrawide 34" 4K UHD, painel IPS, 60Hz, HDR10, portas USB-C e HDMI.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
+                    <span class="h5 fw-bold text-info mb-0">R$ 3.200,00</span>
+                    <button class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white" data-bs-toggle="modal"
+                        data-bs-target="#modalProd">
+                        Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col text-start">
+                <div class="card h-100 border-secondary bg-dark text-white shadow-lg overflow-hidden">
+                <img 
+                    src="https://images.unsplash.com/photo-1642051638424-9c850a09e9c1?q=80&w=800"
+                    class="card-img-top objet-fit-cover" 
+                    style="height: 180px;" 
+                    alt="Imagem de uma Placa de Vídeo RTX 2060"
+                >
+                <div class="card-body p-4 d-flex flex-column">
+                    <h5 class="fw-bold mb-2">Placa de Vídeo RTX 2060</h5>
+                    <p class="text-secondary small flex-grow-1">
+                    NVIDIA GeForce RTX 2060, 6GB GDDR6, Ray Tracing, DLSS, ideal para desenvolvimento gráfico e machine learning.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
+                    <span class="h5 fw-bold text-info mb-0">R$ 2.900,00</span>
+                    <button class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white" data-bs-toggle="modal"
+                        data-bs-target="#modalProd">
+                        Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col text-start">
+                <div class="card h-100 border-secondary bg-dark text-white shadow-lg overflow-hidden">
+                <img 
+                    src="https://images.unsplash.com/photo-1661347558973-84da37c242ed?q=80&w=800"
+                    class="card-img-top objet-fit-cover" 
+                    style="height: 180px;" 
+                    alt="Imagem de um SSD NVMe 1TB"
+                >
+                <div class="card-body p-4 d-flex flex-column">
+                    <h5 class="fw-bold mb-2">SSD NVMe 1TB</h5>
+                    <p class="text-secondary small flex-grow-1">
+                    SSD NVMe de 1TB, leitura e gravação rápidas, ideal para armazenamento de dados e sistemas operacionais.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
+                    <span class="h5 fw-bold text-info mb-0">R$ 599,00</span>
+                    <button class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white" data-bs-toggle="modal"
+                        data-bs-target="#modalProd">
+                        Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col text-start">
+                <div class="card h-100 border-secondary bg-dark text-white shadow-lg overflow-hidden">
+                <img 
+                    src="https://images.unsplash.com/photo-1664813398575-819b46e5ab8d?q=80&w=800"
+                    class="card-img-top objet-fit-cover" 
+                    style="height: 180px;" 
+                    alt="Imagem de um teclado mecânico RGB">
+                <div class="card-body p-4 d-flex flex-column">
+                    <h5 class="fw-bold mb-2">Teclado Mecânico RGB</h5>
+                    <p class="text-secondary small flex-grow-1">Teclado mecânico com iluminação RGB, switches de alta qualidade, ideal para gaming e produtividade.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
+                    <span class="h5 fw-bold text-info mb-0">R$ 299,00</span>
+                    <button class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white" data-bs-toggle="modal"
+                        data-bs-target="#modalProd">
+                        Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col text-start">
+                <div class="card h-100 border-secondary bg-dark text-white shadow-lg overflow-hidden">
+                <img 
+                    src="https://images.unsplash.com/photo-1629429408209-1f912961dbd8?q=80&w=800"
+                    class="card-img-top objet-fit-cover" 
+                    style="height: 180px;" 
+                    alt="Imagem de um mouse gamer"
+                >
+                <div class="card-body p-4 d-flex flex-column">
+                    <h5 class="fw-bold mb-2">Mouse Gamer</h5>
+                    <p class="text-secondary small flex-grow-1">Mouse gamer ergonômico, sensor óptico de alta precisão, 16.000 DPI, ideal para jogos.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
+                    <span class="h5 fw-bold text-info mb-0">R$ 199,00</span>
+                    <button class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white" data-bs-toggle="modal"
+                        data-bs-target="#modalProd">
+                        Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col text-start">
+                <div class="card h-100 border-secondary bg-dark text-white shadow-lg overflow-hidden">
+                <img 
+                    src="https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?q=80&w=800"
+                    class="card-img-top objet-fit-cover" 
+                    style="height: 180px;" 
+                    alt="Imagem de um PC Workstation Ryzen 9"
+                >
+                <div class="card-body p-4 d-flex flex-column">
+                    <h5 class="fw-bold mb-2">PC Workstation Ryzen 9</h5>
+                    <p class="text-secondary small flex-grow-1">
+                    PC Workstation com AMD Ryzen 9 5950X, 64GB RAM, 2TB SSD, NVIDIA RTX 3080, ideal para desenvolvimento pesado e renderização.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top border-secondary">
+                    <span class="h5 fw-bold text-info mb-0">R$ 13.990,00</span>
+                    <button class="btn btn-outline-info btn-sm rounded px-3 shadow-sm text-white" data-bs-toggle="modal"
+                        data-bs-target="#modalProd">
+                        Ver Detalhes
+                    </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- Fim dos Cards -->
+            </div>
+        </div>
+        </section>
+
+        <!-- Seção Depoimentos -->
+        <section 
+        id="depoimentos" 
+        class="min-vh-100 d-flex align-items-center bg-dark bg-gradient py-5 border-top border-secondary"
+        >
         <div class="container text-center">
             <div class="mb-5">
-                <h2 class="display-4 fw-bold text-white">O que dizem nossos 
-                    <span class="text-info">Devs</span>
-                </h2>
-                <p class="text-secondary">Feedback de quem já migrou para o setup de alta performance.</p>
+            <h2 class="display-4 fw-bold text-white">O que dizem nossos 
+                <span class="text-info">Devs</span>
+            </h2>
+            <p class="text-secondary">Fedback de quem já migrou para o setup de alta performance.</p>
             </div>
+
             <!-- Carrossel de depoimentos -->
-            <div id="carrosselDepoimentos" class="carousel slide">
+            <div id="carrosselDepoimentos" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1">
+                </button>
+                <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="1"
+                aria-label="Slide 2">
+                </button>
+                <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="2"
+                aria-label="Slide 3">
+                </button>
             </div>
             <div class="carousel-inner">
                 <!-- Depoimento 1 -->
                 <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <!-- Card de depoimento -->
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                    <img
-                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&fit=acrop"
-                                    class="img-fluid rounded-circle border border-info border-4"
-                                    style="width: 150px; height: 150px; object-fit: cover;"
-                                    alt="Imagem de uma mulher sorridente usando um vestido vermelho e cabelos soltos ao vento"
-                                    >
-                                    </div>
-                                    <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                                    </div>
-                                    </div>
-                                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                    <!-- Card de depoimento -->
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                        <div class="col-md-4">
+                            <img 
+                            src="https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?q=80&w=300&h=300&fit=crop"
+                            class="img-fluid rounded-circle border border-info border-4"
+                            style="width: 150px; height: 150px; object-fit: cover;" 
+                            alt="Imagem de um desenvolvedor feliz usando uma camiseta amarela"
+                            >
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+                                This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                             </div>
                         </div>
+                        </div>
+                    </div><!-- Fim do card de depoimento -->
                     </div>
-                
+                </div>
                 </div>
 
                 <!-- Depoimento 2 -->
                 <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=300&H=300&fit=acrop" class="d-block w-100" alt="Imagem de um homem de terno preto usando óculos e com expressão séria">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300&h=300&fit=crop" class="d-block w-100" alt="Imagem de uma desenvolvedora sorridente usando uma blusa de cor azul claro">
                 </div>
 
                 <!-- Depoimento 3 -->
                 <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?q=80&w=300&fit=acrop" class="d-block w-100" alt="Imagem de um homem de camisa azul e óculos de lentes quadrados">
+                <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=&h=300&fit=crop" class="d-block w-100" alt="Imagem de um desenvolvedor sorrindo e usando um paleto preto com um cachecou cinza, segurando uma garrafa termina.">
                 </div>
-            </div>
-            <!-- Fim carousel-item -->
+            </div> <!-- Fim carousel-inner -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -487,9 +466,9 @@
             </button>
             </div>
         </div>
-    </section>
+        </section>
 
-<!-- Seção Contato-->
+        <!-- Seção Contato -->
         <section id="contato" class="d-flex">
 
         </section>
@@ -497,91 +476,86 @@
 
     <footer class="bg-black bg-gradient text-secondary py-5 border-top border-secondary text-center">
         <div class="container">
-            <div class="row g-4 text-md-start">
-                <div class="col-lg-4">
-                    <h5 class="fw-bold text-info mb-4">Newslatter Nexus Dev Shop</h5>
-                    <p class="small">
-                        Receba as novidades de hardware diretamente no seu e-mail
-                    </p>
-                    <div class="input-group">
-                        <input type="email" class="form-control bg-dark border-secondary text-white placeholder-newslatter" placeholder="Seu e-mail">
-                    <button class="btn btn-outline-info fw-bold text-white px-4">Assinar</button>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <h5 class="text-white fw-bold mb-4">Mapa do Site</h5>
-                    <ul class="list-unstyled d-grid gap-2 small">
-                        <li>
-                            <a href="" class="text-secondary text-decoration-none">Início</a>
-                        </li>
-                        <li>
-                            <a href="" class="text-secondary text-decoration-none">Produtos</a>
-                        </li>
-                        <li>
-                            <a href="" class="text-secondary text-decoration-none">Sobre</a>
-                        </li>
-                        <li>
-                            <a href="" class="text-secondary text-decoration-none">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4">
-                    <h5 class="text-white fw-bold mb-4">Onde Estamos</h5>
-                    <p class="small">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        Av. CPA, Edificio Tech, Sala 101 - Centro, Cuiabá - MT
-                    </p>
-                    <p class="small">
-                        <i class="bi bi-envelope-fill"></i>
-                        contato@nexusdevshop.com.br
-                    </p>
-                    <p class="small">
-                        <i class="bi bi-telephone-fill"></i>
-                        (65) 99999-9999
-                    </p>
-                </div>
-            </div>
-            <hr class="border-secondary my-5 opacity-25">
-            <p>
-                &copy; 2026 Nexus Dev Shop. Todos os direitos reservados.
+        <div class="row g-4 text-md-start">
+            <div class="col-lg-4">
+            <h5 class="fw-bold text-info mb-4">Newsletter Nexus Dev Shop</h5>
+            <p class="small">
+                Receba as novidades de hardware diretamente no seu e-mail
             </p>
-            <a 
-            href="https://raphael-pereira-nascimento.github.io/perfil-contato/"
-            target="_blanck"
+            <div class="input-group">
+                <input type="email" class="form-control bg-dark border-secondary text-white placeholder-newslatter" placeholder="Seu e-mail">
+                <button class="btn btn-outline-info fw-bold text-white px-4">Assinar</button>
+            </div>
+            </div>
+
+            <div class="col-lg-4">
+            <h5 class="text-white fw-bold mb-4">Mapa do Site</h5>
+            <ul class="list-unstyled d-grid gap-2 small">
+                <li>
+                <a href="" class="text-secondary text-decoration-none">Início</a>
+                </li>
+                <li>
+                <a href="" class="text-secondary text-decoration-none">Produtos</a>
+                </li>
+                <li>
+                <a href="" class="text-secondary text-decoration-none">Sobre</a>
+                </li>
+                <li>
+                <a href="" class="text-secondary text-decoration-none">Contato</a>
+                </li>
+            </ul>
+            </div>
+
+            <div class="col-lg-4">
+            <h5 class="text-white fw-bold mb-4">Onde Estamos</h5>
+            <p class="small">
+                <i class="bi bi-geo-alt-fill"></i>
+                Av. CPA, Edificio Tech, Sala 101 - Centro, Cuiabá - MT
+            </p>
+            <p class="small">
+                <i class="bi bi-envelope-fill"></i>
+                contato@nexusdevshop.com.br
+            </p>
+            <p class="small">
+                <i class="bi bi-telephone-fill"></i>
+                (65) 99999-9999
+            </div>
+        </div>
+        <hr class="border-secondary my-5 opacity-25">
+        <p>
+            &copy; 2026 Nexus Dev Shop. Todos os direitos reservados.
+        </p>
+        <a 
+            href="https://www.wandersontimoteo.com.br" 
+            target="_blank" 
             rel="noopener noreferrer"
             class="text-secondary text-decoration-none fw-bold"
-            >
-            Raphael Pereira
+        >
+            Wanderson Timóteo
         </a>
         </div>
-    </footer>
-
-    <footer>
-
     </footer>
 
     <!-- Modal -->
     <div class="modal fade" id="modalProd" tabindex="-1">
         <div class="modal-dialog modal-dialog-centerded text-white text-center">
-            <div class="modal-content bg-dark border border-secundary shadow-lg p-5">
-                <i class="bi bi-cart-check-fill text-info display-1"></i>
-                <h3 class="mt-4 fw-bold">Interesse Registrado!</h3>
-                <p class="text-secondary">
-                    Um especializado técnico entrará em contato para configurar seu novo hardware.
-                </p>
-                <button
-                class="btn btn-outline-info mt-3 text-white fw-bold rounded px-5 py-2 shadow-sm"
-                data-bs-dismiss="modal"
-                >
-                Fechar
-                </button>
-            </div>
+        <div class="modal-content bg-dark border border-secondary shadow-lg p-5">
+            <i class="bi bi-cart-check-fill text-info display-1"></i>
+            <h3 class="mt-4 fw-bold">Interesse Registrado!</h3>
+            <p class="text-secondary">
+            Um especialista técnico entrará em contato para configurar seu novo hardware.
+            </p>
+            <button 
+            class="btn btn-outline-info mt-3 text-white fw-bold rounded px-5 py-2 shadow-sm" 
+            data-bs-dismiss="modal"
+            >
+            Fechar
+            </button>
+        </div>
         </div>
     </div>
 
-    <!-- Link CDN do Bootstrap JS (versão única) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>
