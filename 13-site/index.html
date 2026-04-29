@@ -17,6 +17,22 @@
         .menu-footer-houver :hover{
             color:#adb5bd !important;
         }
+
+        .instagran-icon:hover{
+            background: linear-gradient(45deg,#fcaf45,#f58529,#dd2a7b,#8134af,#515bd4) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            color: transparent !important;
+            transition: 0.3s;
+        }
+        .facebook-icon:hover{
+            color: #1877F2 !important;
+            transition: 0.3s;
+        }
+        .linkedin-icon:hover {
+            color: #0a66c2 !important;
+            transition: 0.3s;
+        }
     </style>
     </head>
 
@@ -538,8 +554,133 @@
         </section>
 
         <!-- Seção Contato -->
-        <section id="contato" class="d-flex">
+        <section id="contato" class="min-vh-100 d-flex align-items-center bg-dark py-5 border-top border-secondary">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center text-start">
+                    <div class="col-lg-5">
+                        <h2 class="display-5 fw-bold text-white mb-4">Vamos <span class="text-info">Conversar?</span></h2>
+                        <p class="lead text-secondary mb-5">
+                            Dúvidas técnicas ou orçamento para sua empresa? Entre em contato com o timeda Nexus Dev Shop.
+                        </p>
+                        <div class="vstack gap-4">
+                            <a
+                            href="https://wa.me/5565999999999"
+                            class="text-white text-decoration-none d-flex align-items-center gap-3"
+                            target="_blanck"
+                            >
+                                <i class="bi bi-whatsapp fs-2 text-success"></i>
+                                <h6 class="mb-0 fw-bold">WhatsApp</h6>
+                                <span class="text-secondary small">(65) 99999-9999</span>
+                            </a>
 
+                        <a
+                            href="mailto:conta@nexusdevshop.com.br"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-white text-decoration-none d-flex align-items-center gap-3"
+                        >
+                            <i class="bi bi-envelope-at fs-2 text-info"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">E-mail Técnico</h6>
+                                <span class="text-secondary small">contato@nexusdevshop.com.br</span>
+                            </div>
+                            </a>
+
+                            <div class="mt-4">
+                                <h6 class="text-uppercase text-info fw-bold small mb-3 ls-wide">
+                                    Minha Presença Digital
+                                </h6>
+                                <div class="d-flex gap-4 redes-sociais-hover">
+                                    <a
+                                        href="http://instagram.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-secondary fs-3 shadow-sm instagran-icon"
+                                        title="Instagram"
+                                    >
+                                        <i class="bi bi-instagram "></i>
+                                    </a>
+                                    <a
+                                        href="http://facebook.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-secondary fs-3 shadow-sm facebook-icon"
+                                        title="Facebook"
+                                    >
+                                        <i class="bi bi-facebook "></i>
+                                    </a>
+                                    <a
+                                        href="http://Linkedin.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-secondary fs-3 shadow-sm linkedin-icon"
+                                        title="Linkedin"
+                                    >
+                                        <i class="bi bi-linkedin "></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="bg-black p-5 rouded-4 shadow-lg border border-secondary text-white">
+                            <form action="" class="row g-3">
+                                <div class="col-md-6">
+                                    <label
+                                    for="none" 
+                                    class="form-label small text-secondary fw-bold"
+                                    >
+                                    Nome Completo
+                                    </label>
+                                    <input
+                                    type="text"
+                                    name="none"
+                                    id="none"
+                                    class="form-control bg-dark border-secondary text-white py-3 placeholder-newslatter"
+                                    placeholder="Digite seu nome"
+                                    >
+                                </div>
+                            </form>
+                                <div class="col-md-6">
+                                    <label
+                                    for="none"
+                                    class="form-label small text-secondary fw-bold"
+                                    >
+                                    E-mail
+                                    </label>
+                                    <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="form-control bg-dark border-secondary text-white py-3 placeholder-newslatter"
+                                    placeholder="Digite seu e-mail"
+                                    >
+                                </div>
+                                <div class="col-md-12">
+                                    <label
+                                    for="mensagem"
+                                    class="form-label small text-secondary fw-bold"
+                                    >
+                                    Mensagem
+                                    </label>
+                                    <textarea
+                                    name="mensagem"
+                                    id="mensagem"
+                                    rows="5"
+                                    placeholder="Digite sua mensagem"
+                                    class="form-control bg-dark border-secondary text-white py-3 placeholder-newslatter">
+                                    </textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button class="btn btn-outline-info w-100 fw-bold text-white py-3 shadow-lg fd-5">
+                                        <i class="bi bi-send-fill me-2"></i>Enviar Mensagem
+                                    </button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -557,7 +698,9 @@
             </div>
             </div>
 
-            <div class="col-lg-4">
+            <!-- Footer -->
+            
+            <div class="col-lg-2 offset-lg-1">
             <h5 class="text-white fw-bold mb-4">Mapa do Site</h5>
             <ul class="list-unstyled d-grid gap-2 small">
                 <li class="menu-footer-houver">
