@@ -554,7 +554,7 @@
         </section>
 
         <!-- Seção Contato -->
-        <section id="contato" class="min-vh-100 d-flex align-items-center bg-dark py-5 border-top border-secondary">
+        <section id="contato" class="min-vh-100 d-flex align-items-center bg-dark py-5 border-top bg-gradient py-5 border-top border-secondary">
             <div class="container py-5">
                 <div class="row g-5 align-items-center text-start">
                     <div class="col-lg-5">
@@ -751,20 +751,29 @@
     <!-- Modal -->
     <div class="modal fade" id="modalProd" tabindex="-1">
         <div class="modal-dialog modal-dialog-centerded text-white text-center">
-        <div class="modal-content bg-dark border border-secondary shadow-lg p-5">
-            <i class="bi bi-cart-check-fill text-info display-1"></i>
-            <h3 class="mt-4 fw-bold">Interesse Registrado!</h3>
-            <p class="text-secondary">
-            Um especialista técnico entrará em contato para configurar seu novo hardware.
-            </p>
-            <button 
-            class="btn btn-outline-info mt-3 text-white fw-bold rounded px-5 py-2 shadow-sm" 
-            data-bs-dismiss="modal"
-            >
-            Fechar
-            </button>
+            <div class="modal-content bg-dark border border-secondary shadow-lg p-5">
+                <i class="bi bi-cart-check-fill text-info display-1"></i>
+                <h3 class="mt-4 fw-bold">Interesse Registrado!</h3>
+                <p class="text-secondary">
+                Um especialista técnico entrará em contato para configurar seu novo hardware.
+                </p>
+                <button 
+                class="btn btn-outline-info mt-3 text-white fw-bold rounded px-5 py-2 shadow-sm" 
+                data-bs-dismiss="modal"
+                >
+                Fechar
+                </button>
+            </div>
         </div>
-        </div>
+    </div>
+
+    <!-- Botão de voltar ao topo -->
+    <div class="fixed-bottom d-flex justify-content-end p-4" style="z-index: 1050; pointer-events:none">
+        <a href="#topo"
+            class="btn btn-outline-info shadow-lg rounded-circle d-flex align-items-center justify-content-center text-white"
+            style="width: 55px; height: 55px; pointer-events: auto;" title="Voltar ao topo">
+            <i class="bi bi-arrow-up fs-4"></i>
+        </a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
